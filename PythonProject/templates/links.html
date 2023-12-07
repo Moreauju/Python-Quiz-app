@@ -1,0 +1,31 @@
+{% macro links_title() %}
+<ul class="nav justify-content-center bg-dark">
+    <li class="nav-item">
+      <a class="nav-link active text-light" aria-current="page" href="/">Quiz App Flask</a>
+    </li>
+</ul>
+    {% endmacro %}
+
+    {% macro links_home() %}
+    <li class="nav-item">
+        <a class="nav-link text-dark" href="/quiz">Start Quiz</a>
+      </li>
+    {% endmacro %}
+
+  {% macro links_results() %}
+    <li class="nav-item">
+      <a class="nav-link text-blue" href="/">Return to home page</a>
+    </li>
+    {% endmacro %}
+
+    {% macro links_quiz() %}
+    <ul class="nav justify-content-center bg-light"></ul>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="/results">Results</a>
+      </li>
+    </ul>
+    {% endmacro %}
+
+
+  
+  

@@ -1,0 +1,87 @@
+{% from "links.html" import links_title %}
+{% from "links.html" import links_results %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <Link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}"> 
+    <title>Document</title>
+</head>
+<body>
+    <div class ="parent">
+        <div class="header mb-2">
+            {{ links_title() }}
+        
+    <div class="nav justify-content-center bg-light">
+        <h1>Quiz: {{session['course']}} <br> </h1>
+       
+    </div>
+    <div class="nav justify-content-center bg-light">
+        <h1>Results: {{ session['correct'] }}/10<br> </h1>
+    </div>
+    <div class="nav justify-content-center bg-light">
+        <h2>{{ session['performance'] }} {{ session['name'] }}! <br> </h2>
+    </div>
+    <ul class="nav justify-content-center">
+        <image src="{{ url_for('static', filename='image/aaronjones.png')}}"></image>
+    </ul>
+    <br>
+    <h4>These are your Guesses:<br> </h4>
+    <br>
+    <h5>Question: {{session['questions'][0]}}</h5>
+    <h6>You were {{ session['check'][0]}}, Guess: {{session['guesses'][0]}}. {{session['guessmade'][0]}}</h6>
+    <h7>Answer: {{ session['answers'][0]}}. {{session['correctanswers'][0]}}<br> </h7>
+    <br>
+    <h5>Question: {{session['questions'][1]}}</h5>
+    <h6>You were {{ session['check'][1]}}, Guess: {{session['guesses'][1]}}. {{session['guessmade'][1]}}</h6>
+    <h7>Answer: {{ session['answers'][1]}}. {{session['correctanswers'][1]}}<br> </h7>
+    <br>
+    <h5>Question: {{session['questions'][2]}}</h5>
+    <h6>You were {{ session['check'][2]}}, Guess: {{session['guesses'][2]}}. {{session['guessmade'][2]}}</h6>
+    <h7>Answer: {{ session['answers'][2]}}. {{session['correctanswers'][2]}}<br> </h7>
+    <br>
+    <h5>Question: {{session['questions'][3]}}</h5>
+    <h6>You were {{ session['check'][3]}}, Guess: {{session['guesses'][3]}}. {{session['guessmade'][3]}}</h6>
+    <h7>Answer: {{ session['answers'][3]}}. {{session['correctanswers'][3]}}<br> </h7>
+    <br>
+    <h5>Question: {{session['questions'][4]}}</h5>
+    <h6>You were {{ session['check'][4]}}, Guess: {{session['guesses'][4]}}. {{session['guessmade'][4]}}</h6>
+    <h7>Answer: {{ session['answers'][4]}}. {{session['correctanswers'][4]}}<br> </h7>
+    <br>
+    <h5>Question: {{session['questions'][5]}}</h5>
+    <h6>You were {{ session['check'][5]}}, Guess: {{session['guesses'][5]}}. {{session['guessmade'][5]}}</h6>
+    <h7>Answer: {{ session['answers'][5]}}. {{session['correctanswers'][5]}}<br> </h7>
+    <br>
+    <h5>Question: {{session['questions'][6]}}</h5>
+    <h6>You were {{ session['check'][6]}}, Guess: {{session['guesses'][6]}}. {{session['guessmade'][6]}}</h6>
+    <h7>Answer: {{ session['answers'][6]}}. {{session['correctanswers'][6]}}<br> </h7>
+    <br>
+    <h5>Question: {{session['questions'][7]}}</h5>
+    <h6>You were {{ session['check'][7]}}, Guess: {{session['guesses'][7]}}. {{session['guessmade'][7]}}</h6>
+    <h7>Answer: {{ session['answers'][7]}}. {{session['correctanswers'][7]}}<br> </h7>
+    <br>
+    <h5>Question: {{session['questions'][8]}}</h5>
+    <h6>You were {{ session['check'][8]}}, Guess: {{session['guesses'][8]}}. {{session['guessmade'][8]}}</h6>
+    <h7>Answer: {{ session['answers'][8]}}. {{session['correctanswers'][8]}}<br> </h7>
+    <br>
+    <h5>Question: {{session['questions'][9]}}</h5>
+    <h6>You were {{ session['check'][9]}}, Guess: {{session['guesses'][9]}}. {{session['guessmade'][9]}}</h6>
+    <h7>Answer: {{ session['answers'][9]}}. {{session['correctanswers'][9]}}<br> </h7>
+    <br>
+    <ul class="nav justify-content-center">
+        <a class="btn btn-success" href="/" role="button">Return to Home</a>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <a class="btn btn-danger" href="/quiz" role="button">Retry Quiz</a>
+    </ul>
+    <br>
+    <br>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
